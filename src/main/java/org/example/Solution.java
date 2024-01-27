@@ -1,7 +1,7 @@
 package org.example;
 
 class Solution {
-    public int canCompleteCircuit(int[] gas, int[] cost) {
+    public static int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;
         int total_surplus = 0;
         int surplus = 0;
@@ -16,5 +16,12 @@ class Solution {
             }
         }
         return (total_surplus < 0) ? -1 : start;
-    }//
+    }
+
+    public static void main(String[] args) {
+        System.out.println("ANS: " + canCompleteCircuit(
+                new int[]{1,2,3,4,5},
+                new int[]{3,4,5,1,2}
+        ));
+    }
 }
